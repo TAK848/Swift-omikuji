@@ -1,9 +1,3 @@
-//public struct Omikuji {
-//    public private(set) var text = "Hello, World!"
-//
-//    public init() {
-//    }
-//}
 public enum Omikuji: String, CaseIterable {
     case greatBlessing = "great blessing"
     case goodBlessing = "good blessing"
@@ -13,11 +7,12 @@ public enum Omikuji: String, CaseIterable {
     case badLuck = "bad luck"
     case terribleLuck = "terrible luck"
 }
+
 extension Omikuji {
-    var description: String {
+    public var description: String {
         rawValue
     }
-    static func draw() -> Self {
+    public static func draw() -> Self {
         allCases.randomElement()!
     }
 }
